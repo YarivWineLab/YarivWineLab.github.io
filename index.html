@@ -95,7 +95,7 @@ h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0;letter-spacing:-.005e
 .about h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:700}
 .about p{max-width:38em;margin:0 0 1.1rem}
 .pi{display:flex;gap:1.1rem;align-items:center;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--line)}
-.pi .photo{width:84px;height:84px;border-radius:50%;background:var(--paper);border:1px dashed var(--muted);display:grid;place-items:center;font:600 .8rem var(--head);color:var(--muted);flex:none;text-align:center}
+.pi .photo{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;flex:none;background:var(--ground)}
 .pi strong{font-family:var(--head);font-size:1.25rem;font-weight:600;display:block}
 .pi span{color:var(--muted);font-size:.95rem}
 
@@ -218,10 +218,9 @@ main{view-transition-name:page}
         <p>Antibodies are among the most precise molecules the body makes. Our group combines systems-level analysis of antibody responses with antibody engineering, asking what the immune system produces in health and disease and how that knowledge can be turned into better diagnostics and therapeutics.</p>
         <p>We are part of The Shmunis School of Biomedicine and Cancer Research at Tel Aviv University.</p>
         <div class="pi">
-          <!-- EDIT: replace the placeholder with <img src="pi.jpg" alt="Dr. Yariv Wine" class="photo"> -->
-          <div class="photo">Photo</div>
+          <a href="members.html#pi"><img class="photo" src="images/members/yariv-wine.webp" alt="Prof. Yariv Wine" width="96" height="96"></a>
           <div>
-            <strong>Dr. Yariv Wine</strong>
+            <strong>Prof. Yariv Wine</strong>
             <span>Principal investigator</span>
           </div>
         </div>
