@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Group members | The Wine Lab</title>
+<meta name="description" content="Meet the researchers, students and alumni of the Wine Lab at Tel Aviv University.">
+<link rel="icon" type="image/png" sizes="64x64" href="images/logo/favicon.png">
+<link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+
+:root{
+  --paper:#ffffff; --ground:#f3f4f7; --ink:#2e2a27; --muted:#5d5a57; --line:#d4d6dc;
+  --navy:#1c2f6b; --navy-soft:#e6e9f3; --red:#c93a2e; --slate:#3f4254;
+  --head:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1b1d24; --ground:#14161b; --ink:#eceae6; --muted:#b3b0ab; --line:#3a3d47;
+  --navy:#9fb2ec; --navy-soft:#262c40; --red:#ef7a6c; --slate:#c9cbd6;}}
+:root[data-theme="dark"]{
+  --paper:#1b1d24; --ground:#14161b; --ink:#eceae6; --muted:#b3b0ab; --line:#3a3d47;
+  --navy:#9fb2ec; --navy-soft:#262c40; --red:#ef7a6c; --slate:#c9cbd6;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.075rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0;letter-spacing:-.005em}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line);background:var(--paper)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:112px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink)}
+.brand img{height:92px;width:auto;display:block}
+@media (max-width:860px){.brand img{height:68px}}
+.nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+.nav a{font-family:var(--head);font-weight:600;font-size:1.05rem;color:var(--ink);text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--ink)}
+.nav a[aria-current]{border-bottom-color:var(--red)}
+.menu-btn{display:none;font:600 1rem var(--head);background:none;border:1px solid var(--line);color:var(--ink);padding:.45rem .9rem;border-radius:4px;cursor:pointer}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:.5rem clamp(1.25rem,4vw,2.5rem) 1rem;z-index:10}
+  .nav.open{display:flex}
+  .nav a{padding:.7rem 0;border-bottom:1px solid var(--line)}
+  .site-header{position:relative}
+}
+
+
+/* Members page */
+.page-hero{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(1.5rem,3vw,2.5rem)}
+.eyebrow{font:600 .88rem var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 .5rem}
+.page-hero h1{font-size:clamp(3rem,8vw,5.8rem);font-weight:700;text-transform:uppercase}
+.page-hero .lede{font-size:clamp(1.1rem,1.6vw,1.28rem);max-width:36em;margin:1rem 0 1.8rem}
+.jump{display:flex;flex-wrap:wrap;gap:.5rem}
+.jump a{font:600 1rem var(--head);text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;display:inline-flex;gap:.5rem;align-items:center}
+.jump a:hover{border-color:var(--ink)}
+.jump b{font-weight:600;color:var(--muted);font-size:.9rem}
+.group{padding:clamp(2rem,5vw,3.5rem) 0}
+.group-head{display:flex;align-items:baseline;gap:1rem;border-bottom:1px dashed var(--muted);padding-bottom:.8rem;margin-bottom:2rem}
+.group-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:700}
+.group-head span{font:600 1rem var(--head);color:var(--muted)}
+/* PI */
+.pi-card{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.pi-card .ph{border-radius:10px;overflow:hidden;aspect-ratio:1;background:var(--ground)}
+.pi-card .ph img{width:100%;height:100%;object-fit:cover}
+.pi-card h3{font-size:clamp(2rem,4vw,3rem);font-weight:700;margin:.2rem 0 1.2rem}
+.contact{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.4rem;margin:0 0 1.6rem;font-size:1.02rem}
+.contact dt{font:600 .9rem var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.15rem}
+.contact dd{margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{font-family:var(--head);font-weight:600;font-size:1.05rem;text-decoration:none;padding:.6rem 1.2rem;border-radius:4px;border:2px solid var(--navy)}
+.btn.primary{background:var(--navy);color:var(--paper)}
+.btn.ghost{color:var(--navy)}
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2.4rem 1.8rem}
+.person .ph{aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--ground);margin-bottom:1rem}
+.person .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.person:hover .ph img{transform:scale(1.04)}
+.role{font:600 .85rem var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin:0 0 .2rem}
+.person h3,.alum h3{font-size:1.5rem;font-weight:600}
+.note{color:var(--muted);font-size:.95rem;margin:.25rem 0 0}
+.bio{margin-top:.7rem;font-size:.98rem;line-height:1.6;max-height:8em;overflow:hidden;position:relative;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.bio.clipped::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2.6em;background:linear-gradient(transparent,var(--paper));transition:opacity .3s}
+.bio.open::after{opacity:0}
+.bio p{margin:0 0 .7rem}
+.bio p:last-child{margin:0}
+.more-btn{font:600 .95rem var(--head);background:none;border:0;padding:.3rem 0;margin-top:.2rem;color:var(--navy);cursor:pointer;text-decoration:underline;text-underline-offset:.2em}
+.links{display:flex;gap:1rem;margin-top:.8rem;font:600 .98rem var(--head)}
+.links a{text-decoration:none;border-bottom:1px solid currentColor}
+.empty{display:grid;place-items:center;align-content:center;gap:.4rem;background:repeating-linear-gradient(135deg,var(--ground) 0 12px,var(--paper) 12px 24px);border:1px dashed var(--muted)}
+.empty span{font:700 2.8rem var(--head);color:var(--slate)}
+.empty small{font:600 .82rem var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* Alumni */
+.alumni{background:var(--ground);margin-top:clamp(1.5rem,4vw,3rem)}
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
+.alum{display:flex;gap:1.1rem;align-items:flex-start;background:var(--paper);border-radius:8px;padding:1.1rem 1.2rem}
+.ph-sm{width:76px;height:76px;border-radius:50%;overflow:hidden;flex:none;background:var(--ground)}
+.ph-sm img{width:100%;height:100%;object-fit:cover}
+.alum h3{font-size:1.3rem}
+.alum details{margin-top:.5rem;font-size:.96rem;line-height:1.55}
+.alum summary{font:600 .95rem var(--head);color:var(--navy);cursor:pointer;width:max-content}
+.alum details p{margin:.6rem 0 0}
+.alum .links{margin-top:.5rem;font-size:.95rem}
+@media (max-width:760px){.pi-card{grid-template-columns:1fr}.pi-card .ph{max-width:320px}.agrid{grid-template-columns:1fr}}
+/* Reveal on scroll */
+.js .reveal{opacity:0;transform:translateY(22px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease calc(var(--d,0)*90ms),transform .8s cubic-bezier(.16,1,.3,1) calc(var(--d,0)*90ms)}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none}}
+/* Footer */
+.site-footer{background:#1c2f6b;color:#e9ecf5;padding:2.8rem 0 2.4rem;font-size:.98rem}
+.site-footer a{color:#fff}
+.foot-logo{display:inline-block;margin-bottom:2rem}
+.foot-logo img{height:90px;width:auto}
+.foot{display:flex;flex-wrap:wrap;gap:2rem 3rem;justify-content:space-between;align-items:flex-start}
+.tau{display:flex;gap:1rem;align-items:center;max-width:32rem}
+.tau img{width:42px;height:auto;filter:brightness(0) invert(1)}
+.foot address{font-style:normal}
+.copy{margin-top:2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.2);font-size:.88rem;color:#c3c9dc}
+/* Page transitions (cross-document View Transitions, with a fallback) */
+@view-transition{navigation:auto}
+.site-header{view-transition-name:site-header}
+.brand{view-transition-name:brand}
+main{view-transition-name:page}
+::view-transition-group(page){animation-duration:.6s}
+::view-transition-old(page){animation:vt-out .3s cubic-bezier(.5,0,.75,0) both}
+::view-transition-new(page){animation:vt-in .6s cubic-bezier(.16,1,.3,1) .12s both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-18px) scale(.985);filter:blur(4px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(36px);filter:blur(6px)}}
+@keyframes vt-spin{from{transform:rotate(-180deg) scale(.6)}}
+.no-vt main{animation:vt-in .6s cubic-bezier(.16,1,.3,1) both}
+.no-vt body.is-leaving main{animation:vt-out .28s cubic-bezier(.5,0,.75,0) both}
+@media (prefers-reduced-motion:reduce){
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+  .no-vt main,.no-vt body.is-leaving main{animation:none}
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="The Wine Lab, home">
+      <picture>
+        <source srcset="images/logo/wine-logo-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="images/logo/wine-logo.png" alt="Wine, Applied Immunology" width="198" height="92">
+      </picture>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="members.html" aria-current="page">Group members</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">People</p>
+      <h1>Group members</h1>
+      <p class="lede">The researchers and students of the Wine Lab, and the alumni who helped build it.</p>
+      <nav class="jump" aria-label="On this page">
+        <a href="#pi">Principal investigator</a>
+        <a href="#phd">PhD students <b>7</b></a>
+        <a href="#msc">M.Sc. students <b>3</b></a>
+        <a href="#alumni">Alumni <b>13</b></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="group" id="pi">
+    <div class="wrap">
+      <div class="pi-card reveal">
+        <div class="ph"><img src="images/members/yariv-wine.webp" alt="Yariv Wine" width="400" height="400"></div>
+        <div>
+          <p class="role">Principal investigator</p>
+          <h3>Yariv Wine, PhD</h3>
+          <dl class="contact">
+            <dt>Office</dt><dd>Green Building, room 222<br>The Shmunis School of Biomedicine and Cancer Research<br>Faculty of Life Sciences, Tel Aviv University<br>Ramat Aviv, Israel 6997801</dd>
+            <dt>Phone</dt><dd><a href="tel:+97236408723">+972 3 6408723</a></dd>
+            <dt>Email</dt><dd><a href="mailto:yarivwine@tauex.tau.ac.il">yarivwine@tauex.tau.ac.il</a></dd>
+          </dl>
+          <div class="btns">
+            <a class="btn primary" href="mailto:yarivwine@tauex.tau.ac.il">Email Yariv</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/yarivwine/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="group" id="phd">
+    <div class="wrap">
+      <div class="group-head"><h2>PhD students</h2><span>7</span></div>
+      <div class="grid"><article class="person reveal" style="--d:0"><div class="ph"><img src="images/members/hagar-naim.webp" alt="Hagar Naim" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Hagar Naim</h3><p class="note">Co-advisor: Prof. Noga Kronfeld-Schor</p><div class="bio"><p>Hagar joined the group in May 2021 as a PhD student after completing her M.Sc. in Ecology and Environmental Studies at the Faculty of Life Sciences, Tel Aviv University.</p><p>Her PhD research focuses on investigating the effects of light pollution on the immune system, with an emphasis on the intricate interplay between the biological clock and both adaptive and innate immune responses.</p><p>To explore the role of the biological clock in regulating immune function, Hagar employs a unique animal model (Acomys spp.) that includes both nocturnal and diurnal species.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:hagarnaim1@gmail.com">Email</a></div></div></article><article class="person reveal" style="--d:1"><div class="ph"><img src="images/members/aya-kigel.webp" alt="Aya Kigel" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Aya Kigel</h3><div class="bio"><p>Aya joined our group in October 2017 after completing her B.Sc. at the Robert H. Smith Faculty of Agriculture, Food and Environment, Hebrew University of Jerusalem.</p><p>During her PhD, Aya focuses on the molecular landscape of B cell immunity at the maternal–infant interface, which involves the study of maternal immunization.</p><p>In her M.Sc. project Aya focused on developing computational and experimental frameworks for proteomic analysis of serum antibodies.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:kigel1992@gmail.com">Email</a><a href="https://www.linkedin.com/in/aya-kigel-97ab98202/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="person reveal" style="--d:2"><div class="ph"><img src="images/members/david-taussig.webp" alt="David Taussig" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>David Taussig</h3><div class="bio"><p>David joined our group in May 2020 after completing his B.Sc. in Biomedical Engineering at UAS Vienna, Austria.</p><p>He completed his M.Sc. in Biotechnology and is currently developing a platform leveraging NGS and phage display towards the discovery of antimicrobial antibodies for his PhD.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:davidtaussig@mail.tau.ac.il">Email</a><a href="https://www.linkedin.com/in/david-t-81980621b/" target="_blank" rel="noopener">LinkedIn</a><a href="https://orcid.org/0000-0002-6653-7308" target="_blank" rel="noopener">ORCID</a></div></div></article><article class="person reveal" style="--d:3"><div class="ph"><img src="images/members/talya-bar-am.webp" alt="Talya Bar-Am" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Talya Bar-Am</h3><div class="bio"><p>Talya joined our group in October 2021 after completing her B.Sc. in Biology at the Faculty of Life Sciences, Tel Aviv University.</p><p>She completed her M.Sc. in Biotechnology in our lab. Talya&#x27;s project is harnessing human milk B cells for antibody-based strategies to combat bacterial pathogens.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:talyabaram@mail.tau.ac.il">Email</a><a href="https://www.linkedin.com/in/talya-bar-am-783a171b1/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="person reveal" style="--d:0"><div class="ph"><img src="images/members/yael-shenkerman.webp" alt="Yael Shenkerman" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Yael Shenkerman</h3><div class="bio"><p>Yael joined our group in March 2024 as a PhD student. She previously earned her M.Sc. in Life Sciences from Ben-Gurion University and holds an MBA in Technology Management, Innovation &amp; Entrepreneurship from Tel Aviv University.</p><p>Yael’s research focuses on characterizing memory B cell (MBC) subphenotypes generated by vaccination, aiming to understand their distinctions from infection-induced MBCs.</p><p>Her project investigates the functional roles of MBC subphenotypes in immune protection and response durability, with the goal of identifying biomarkers predictive of vaccine efficacy. This work could ultimately advance vaccine design by illuminating mechanisms that support long-lasting immune memory and protection.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:yael.shenkerman@gmail.com">Email</a><a href="https://www.linkedin.com/in/yael-shenkerman/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="person reveal" style="--d:1"><div class="ph"><img src="images/members/gaya-roga.webp" alt="Gaya Roga" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Gaya Roga</h3><div class="bio"><p>Gaya joined our group in October 2022 after completing her B.Sc. in Biology at the Faculty of Life Sciences, Tel Aviv University.</p><p>Her M.Sc. research focused on developing computational and experimental frameworks for proteomic analysis of serum antibodies.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:gayaroga@mail.tau.ac.il">Email</a><a href="https://www.linkedin.com/in/gaya-roga-635936227/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="person reveal" style="--d:2"><div class="ph"><img src="images/members/meital-mazin.webp" alt="Meital Mazin" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Meital Mazin</h3><div class="bio"><p>Meital joined our group in October 2022 after completing her B.Sc. in the Interdisciplinary Program in Medical and Life Sciences at Tel Aviv University.</p><p>Her M.Sc. research focused on identifying distinct tumor-infiltrating B cell (TIL-B) populations in triple-negative breast cancer (TNBC) and investigating IgA secretion within the mucosal TNBC microenvironment. This work involved an extensive computational analysis of single-cell sequencing data.</p><p>For her PhD, she will continue characterizing TIL-Bs, expanding her research to pediatric acute lymphoblastic leukemia.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:meital.mazin@gmail.com">Email</a><a href="https://www.linkedin.com/in/meital-mazin-048b29152/" target="_blank" rel="noopener">LinkedIn</a></div></div></article></div>
+    </div>
+  </section>
+
+  <section class="group" id="msc">
+    <div class="wrap">
+      <div class="group-head"><h2>M.Sc. students</h2><span>3</span></div>
+      <div class="grid"><article class="person reveal" style="--d:0"><div class="ph"><img src="images/members/maya-chen.webp" alt="Maya Chen" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Maya Chen</h3><div class="bio"><p>Maya joined our group in October 2024 after completing her B.Sc. in Biotechnology and Biology at the Faculty of Life Sciences, Tel Aviv University.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button><div class="links"><a href="mailto:mayachen1@mail.tau.ac.il">Email</a><a href="https://www.linkedin.com/in/maya-chen-bb2b74280/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="person reveal" style="--d:1"><div class="ph"><img src="images/members/lily-ayala-roth.webp" alt="Lily Ayala Roth" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Lily Ayala Roth</h3><p class="note">Co-advisor: Prof. Noga Kronfeld-Schor</p><div class="bio"><p>Lily joined our group in October 2025 after completing her B.Sc. in Biology and Environmental Sciences at the Faculty of Sciences, the Hebrew University of Jerusalem.</p><p>Lily&#x27;s research is in the field of eco-immunology and focuses on the effects of artificial light at night (ALAN) on the immune system, using diurnal and nocturnal wild spiny mice (Acomys spp.) maintained under semi-natural conditions. Her work examines how ALAN influences daily rhythms in immune function, as well as wound healing dynamics and immune cell populations during tissue regeneration.</p></div><button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button></div></article><article class="person reveal" style="--d:2"><div class="ph"><img src="images/members/yoni-bench.webp" alt="Yoni Bench" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Yoni Bench</h3><p class="note">Co-advisor: Prof. Noga Kronfeld-Schor</p></div></article></div>
+    </div>
+  </section>
+
+  <section class="group alumni" id="alumni">
+    <div class="wrap">
+      <div class="group-head"><h2>Alumni</h2><span>13</span></div>
+      <div class="agrid"><article class="alum reveal" style="--d:0"><div class="ph-sm"><img src="images/members/yael-dror.webp" alt="Yael Dror, M.Sc." loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">Laboratory manager</p><h3>Yael Dror, M.Sc.</h3></div></article><article class="alum reveal" style="--d:1"><div class="ph-sm"><img src="images/members/ligal-aizik.webp" alt="Ligal Aizik" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Ligal Aizik</h3><details><summary>About</summary><p>Ligal joined our group in May 2019 after completing her B.Sc. in Biotechnology at the Faculty of Life Sciences, Tel Aviv University.</p><p>In her PhD project Ligal characterized the phenotype of tumor-infiltrating B lymphocytes, tumor-associated B cells and their distinct antibody repertoire.</p><p>During her B.Sc. she gained experience as a research assistant in our lab, working on the production, purification and validation of the Tetanus Toxoid C fragment (rTTC), and the purification of rTTC- and TT-specific antibodies from pregnant women.</p></details><div class="links"><a href="https://www.linkedin.com/in/ligal-aizik/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="alum reveal" style="--d:2"><div class="ph-sm"><img src="images/members/shira-melki.webp" alt="Shira Melki" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Shira Melki</h3><details><summary>About</summary><p>Shira joined our group in October 2023 after completing her B.Sc. in Biology at the Faculty of Life Sciences, Tel Aviv University.</p><p>Her research focused on isolating and characterizing tumor-specific antibodies from the tumor microenvironment, with particular emphasis on patients with non-small cell lung cancer (NSCLC).</p><p>The project aimed to identify antibodies that could play a role in targeted cancer therapies by harnessing the body’s natural immune response.</p></details></div></article><article class="alum reveal" style="--d:0"><div class="ph-sm"><img src="images/members/noam-ofri.webp" alt="Noam Ofri" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Noam Ofri</h3><details><summary>About</summary><p>Noam joined our group in October 2023 after completing her B.Sc. in Biology at the Faculty of Life Sciences, Tel Aviv University.</p><p>Her research focused on antibacterial antibody engineering.</p></details><div class="links"><a href="https://www.linkedin.com/in/noam-ofri-bb5b38264/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="alum reveal" style="--d:1"><div class="ph-sm"><img src="images/members/neta-even-tov.webp" alt="Neta Even-Tov" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Neta Even-Tov</h3><details><summary>About</summary><p>Neta joined our group in October 2024 after completing her B.Sc. in Biotechnology and Biology at the Faculty of Life Sciences, Tel Aviv University.</p></details><div class="links"><a href="https://www.linkedin.com/in/neta-even-tov-364073297/" target="_blank" rel="noopener">LinkedIn</a></div></div></article><article class="alum reveal" style="--d:2"><div class="ph-sm"><img src="images/members/bar-avidov.webp" alt="Bar Avidov" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Bar Avidov</h3><details><summary>About</summary><p>Bar joined our group in October 2022 after completing his B.Sc. in Biology at the Faculty of Life Sciences, Tel Aviv University.</p><p>He completed his M.Sc. in Computational Biology. His research project focused on studying paratope–epitope interactions in antibodies.</p></details></div></article><article class="alum reveal" style="--d:0"><div class="ph-sm"><img src="images/members/camilla-terracina.webp" alt="Camilla Terracina" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Camilla Terracina</h3><details><summary>About</summary><p>Camilla joined our group in October 2021 after completing her B.Sc. in Biology at the Faculty of Life Sciences, Sapienza University of Rome.</p><p>In her M.Sc. Camilla worked on the dynamics of the vaccine-specific antibody response and the mother–baby interface.</p></details></div></article><article class="alum reveal" style="--d:1"><div class="ph-sm"><img src="images/members/shai-rosenstein.webp" alt="Shai Rosenstein" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Shai Rosenstein</h3><details><summary>About</summary><p>Shai joined our group in October 2015 after completing her B.Sc. at the Faculty of Life Sciences, Tel Aviv University.</p><p>During her B.Sc. studies she worked as a research assistant in the Department of Zoology and in the Department of Molecular Microbiology and Biotechnology.</p><p>In her M.Sc. project Shai focused on the characterization of the antibodies elicited following infusion of an anti-TNFα agent (Infliximab) to IBD patients, looking for associations between neutralizing anti-drug antibodies and various cytokines (e.g. BAFF).</p></details></div></article><article class="alum reveal" style="--d:2"><div class="ph-sm"><img src="images/members/limor-levy.webp" alt="Limor Levy" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Limor Levy</h3><details><summary>About</summary><p>Limor joined our group in April 2016 after completing her master&#x27;s thesis at the Department of Molecular Microbiology and Biotechnology, Tel Aviv University.</p><p>During her PhD, Limor focused on the impact of pregnancy on the nature of the immune response following maternal immunization.</p><p>In her M.Sc. studies, she developed an ex vivo system for high-throughput analysis of molecular chaperones as a therapeutic strategy for Von Hippel–Lindau syndrome.</p><p>Alongside her PhD research, Limor tutored future scientists in the ‘Tel Aviv University for Youth’ program, which encourages middle and high school students to discover and research in academia.</p></details></div></article><article class="alum reveal" style="--d:0"><div class="ph-sm"><img src="images/members/tsuf-eyran.webp" alt="Tsuf Eyran" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Tsuf Eyran</h3><details><summary>About</summary><p>Tsuf joined the Wine lab in October 2019 after completing his B.Sc. in Life Sciences at the Faculty of Life Sciences, Ben-Gurion University.</p><p>Tsuf focused his research on the longitudinal kinetics of the serological response in COVID-19 recovered patients over a period of 14 months, comparing the longitudinal kinetics of recovered patients, naïve BNT162b2 vaccinees and recovered patients post vaccination.</p></details></div></article><article class="alum reveal" style="--d:1"><div class="ph-sm"><img src="images/members/anna-vaisman-mentesh.webp" alt="Anna Vaisman Mentesh" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">PhD student</p><h3>Anna Vaisman Mentesh</h3><p class="note">Co-advisor: Prof. Itay Benhar</p><details><summary>About</summary><p>Anna joined our group in October 2014 after completing her M.Sc. thesis at the Department of Molecular Microbiology and Biotechnology.</p><p>In her PhD project Anna analyzed the drug–antibody repertoire in inflammatory bowel disease patients treated with Infliximab.</p><p>During her M.Sc. she worked on developing an animal model for in vivo restoration of p53 cancer-associated mutations and a novel method of examining p53 DNA binding.</p></details></div></article><article class="alum reveal" style="--d:2"><div class="ph-sm"><img src="images/members/yaron-hillman.webp" alt="Yaron Hillman, PhD" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">Research associate</p><h3>Yaron Hillman, PhD</h3><details><summary>About</summary><p>Yaron completed his PhD at Tel Aviv University, at the Department of Cell and Developmental Biology, Sackler Faculty of Medicine, under the supervision of Prof. Zvi Fishelson.</p><p>Yaron worked on a novel therapeutic monoclonal antibody to combat multidrug-resistant (MDR) pathogenic bacteria.</p><p>In his PhD he studied and characterized microRNAs that modulate the sensitivity of cancer cells to complement-dependent cytotoxicity.</p></details></div></article><article class="alum reveal" style="--d:0"><div class="ph-sm"><img src="images/members/dan-lustiger.webp" alt="Dan Lustiger" loading="lazy" width="400" height="400"></div><div class="txt"><p class="role">M.Sc. student</p><h3>Dan Lustiger</h3><details><summary>About</summary><p>Dan joined our group in October 2017 after completing his B.Sc. in Marine Biotechnology at the Ruppin Academic Center.</p><p>During his B.Sc. Dan participated in a research project under the supervision of Dr. Nir Nesher and Dr. Tal Shomrat, which focused on the structure and antibacterial activity of Octopus vulgaris skin mucus. His M.Sc. involved the study of antibacterial immunotherapy.</p></details></div></article></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="foot-logo" href="index.html"><img src="images/logo/wine-logo-footer.png" alt="Wine, Applied Immunology" width="194" height="90"></a>
+    <div class="foot">
+      <div class="tau">
+        <img src="data:image/webp;base64,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" alt="Tel Aviv University" width="42" height="54">
+        <div>Tel Aviv University<br>The George S. Wise Faculty of Life Sciences<br>The Shmunis School of Biomedicine and Cancer Research</div>
+      </div>
+      <!-- EDIT: add your building, room and email -->
+      <address>
+        Ramat Aviv, Tel Aviv 6997801, Israel<br>
+        <a href="mailto:yarivwine@tauex.tau.ac.il">yarivwine@tauex.tau.ac.il</a>
+      </address>
+    </div>
+    <p class="copy">&copy; <span id="yr">2026</span> The Wine Lab, Tel Aviv University</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // Read more toggles, shown only when a bio is clipped
+  [].forEach.call(document.querySelectorAll('.bio'),function(b){
+    var m=b.nextElementSibling;
+    if(b.scrollHeight>b.clientHeight+4){m.hidden=false;b.classList.add('clipped');
+      m.addEventListener('click',function(){var o=b.classList.toggle('open');b.style.maxHeight=o?b.scrollHeight+'px':'';m.setAttribute('aria-expanded',o);m.textContent=o?'Show less':'Read more'});}
+  });
+  // Reveal on scroll
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  [].forEach.call(els,function(e){io.observe(e)});
+})();
+</script>
+<script>
+/* Fallback page transition for browsers without cross-document View Transitions */
+(function(){
+  if('onpagereveal' in window) return;
+  document.documentElement.classList.add('no-vt');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target) return;
+    var url=new URL(a.href,location.href);
+    if(url.origin!==location.origin||!/\.html$|\/$/.test(url.pathname)||url.pathname===location.pathname) return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    e.preventDefault(); document.body.classList.add('is-leaving');
+    setTimeout(function(){location.href=url.href},260);
+  });
+  window.addEventListener('pageshow',function(){document.body.classList.remove('is-leaving')});
+})();
+</script>
+
+</body>
+</html>
